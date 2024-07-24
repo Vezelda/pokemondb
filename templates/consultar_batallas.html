@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Batallas</title>
+</head>
+<body>
+    <h1>Batallas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Entrenador 1</th>
+            <th>Entrenador 2</th>
+            <th>Pokemon 1</th>
+            <th>Pokemon 2</th>
+            <th>Resultado</th>
+        </tr>
+        {% for batalla in batallas %}
+        <tr>
+            <td>{{ batalla[0] }}</td>
+            <td>{{ batalla[1] }}</td>
+            <td>{{ batalla[2] }}</td>
+            <td>{{ batalla[3] }}</td>
+            <td>{{ batalla[4] }}</td>
+            <td>{{ batalla[5] }}</td>
+            <td>{{ batalla[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

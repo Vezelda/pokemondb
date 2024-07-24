@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Entrenadores</title>
+</head>
+<body>
+    <h1>Entrenadores y sus Pokemones</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Entrenador</th>
+            <th>Pokemon</th>
+        </tr>
+        {% for entrenador in entrenadores_pokemones %}
+        <tr>
+            <td>{{ entrenador[0] }}</td>
+            <td>{{ entrenador[1] }}</td>
+            <td>{{ entrenador[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

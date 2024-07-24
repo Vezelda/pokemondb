@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eliminar Entrenador</title>
+</head>
+<body>
+    <h1>Eliminar Entrenador</h1>
+    <form method="POST">
+        Entrenador: 
+        <select name="entrenador_id" required>
+            {% for entrenador in entrenadores_pokemones %}
+            <option value="{{ entrenador[0] }}">{{ entrenador[1] }} - {{ entrenador[2] }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Eliminar">
+    </form>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

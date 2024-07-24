@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modificar Entrenador</title>
+</head>
+<body>
+    <h1>Modificar Entrenador</h1>
+    <form method="POST">
+        Entrenador: 
+        <select name="entrenador_id" required>
+            {% for entrenador in entrenadores_pokemones %}
+            <option value="{{ entrenador[0] }}">{{ entrenador[1] }} - {{ entrenador[3] }}</option>
+            {% endfor %}
+        </select><br>
+        Nuevo Pokemon: 
+        <select name="nuevo_pokemon_id" required>
+            {% for pokemon in pokemones_disponibles %}
+            <option value="{{ pokemon[0] }}">{{ pokemon[1] }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Modificar">
+    </form>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

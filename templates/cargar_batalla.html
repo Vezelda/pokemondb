@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cargar Batalla</title>
+</head>
+<body>
+    <h1>Crear datos de batallas</h1>
+    <form method="POST">
+        Fecha: <input type="date" name="fecha" required><br>
+        Entrenador 1: 
+        <select name="entrenador1_id" required>
+            {% for entrenador in entrenadores %}
+            <option value="{{ entrenador[0] }}">{{ entrenador[1] }}</option>
+            {% endfor %}
+        </select><br>
+        Entrenador 2: 
+        <select name="entrenador2_id" required>
+            {% for entrenador in entrenadores %}
+            <option value="{{ entrenador[0] }}">{{ entrenador[1] }}</option>
+            {% endfor %}
+        </select><br>
+        Pokemon 1: 
+        <select name="pokemon1_id" required>
+            {% for entrenador, pokemon_id, pokemon_nombre in pokemones %}
+            <option value="{{ pokemon_id }}">{{ entrenador }} - {{ pokemon_nombre }}</option>
+            {% endfor %}
+        </select><br>
+        Pokemon 2: 
+        <select name="pokemon2_id" required>
+            {% for entrenador, pokemon_id, pokemon_nombre in pokemones %}
+            <option value="{{ pokemon_id }}">{{ entrenador }} - {{ pokemon_nombre }}</option>
+            {% endfor %}
+        </select><br>
+        Resultado: <input type="text" name="resultado" required><br>
+        <input type="submit" value="Crear">
+    </form>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cargar Entrenador y Pokemon</title>
+</head>
+<body>
+    <h1>Cargar Entrenador y Pokemon</h1>
+    <form method="post" action="/cargar_entrenador">
+        <label for="nombre_entrenador">Nombre del Entrenador:</label>
+        <input type="text" id="nombre_entrenador" name="nombre_entrenador" required><br><br>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br><br>
+        
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required><br><br>
+        
+        <h2>Detalles del Pokemon</h2>
+        <label for="nombre_pokemon">Nombre del Pokémon:</label>
+        <input type="text" id="nombre_pokemon" name="nombre_pokemon" required><br><br>
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" required><br><br>
+        
+        <label for="habilidad">Habilidad:</label>
+        <input type="text" id="habilidad" name="habilidad" required><br><br>
+        
+        <label for="ataque">Ataque:</label>
+        <input type="number" id="ataque" name="ataque" required><br><br>
+        
+        <label for="defensa">Defensa:</label>
+        <input type="number" id="defensa" name="defensa" required><br><br>
+        
+        <label for="velocidad">Velocidad:</label>
+        <input type="number" id="velocidad" name="velocidad" required><br><br>
+        
+        <label for="hp">HP:</label>
+        <input type="number" id="hp" name="hp" required><br><br>
+
+        <input type="submit" value="Cargar">
+    </form>
+</body>
+</html>
